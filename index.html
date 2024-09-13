@@ -3,198 +3,206 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Puente | iOS Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Eduardo Daniel Puentes Santos - iOS Developer</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
         header {
-            background: #f4f4f4;
-            padding: 20px;
+            background: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: 2px solid #ddd;
             text-align: center;
         }
-        .profile-img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-        }
-        .header-content h1 {
+        header h1 {
             margin: 0;
+            font-size: 2.5rem;
         }
-        .header-content p {
-            margin: 5px 0;
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
         }
-        section {
-            padding: 20px;
-            margin: 0 10%;
-        }
-        .job {
-            margin-bottom: 20px;
-        }
-        .job img {
-            width: 100px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        .job h3 {
-            margin: 0;
-        }
-        .job a {
-            color: #007bff;
+        nav a {
             text-decoration: none;
+            color: #007aff;
+            margin: 0 15px;
+            font-size: 1.1rem;
         }
-        .job a:hover {
-            text-decoration: underline;
+        .section {
+            padding: 20px;
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        .skills ul {
-            list-style: none;
-            padding: 0;
+        .section h2 {
+            border-bottom: 2px solid #007aff;
+            padding-bottom: 10px;
         }
-        .skills li {
-            background: #e4e4e4;
-            margin: 5px 0;
-            padding: 10px;
-            border-radius: 5px;
-        }
-        .projects img, .certifications img {
-            width: 100px;
-            vertical-align: middle;
-            margin-right: 10px;
-        }
-        .testimonials blockquote {
-            border-left: 3px solid #007bff;
-            padding-left: 20px;
-            margin: 20px 0;
-            font-style: italic;
-        }
-        .testimonials cite {
-            display: block;
-            text-align: right;
-            font-weight: bold;
+        .section p {
+            margin: 10px 0;
         }
         footer {
-            background: #f4f4f4;
+            background: #fff;
             padding: 10px;
             text-align: center;
+            border-top: 2px solid #ddd;
+        }
+        footer p {
+            margin: 0;
+        }
+        .button {
+            display: inline-block;
+            background: #007aff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background: #005bb5;
+        }
+        .project-item {
+            margin-bottom: 15px;
+        }
+        .project-item a {
+            text-decoration: none;
+            color: #007aff;
+        }
+        .project-item a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="header-content">
-            <img src="profile.jpg" alt="Eduardo Puente" class="profile-img">
-            <h1>Eduardo Puente</h1>
-            <p>Senior iOS Developer | Swift | Objective-C</p>
-            <p>Email: <a href="mailto:puente68@gmail.com">puente68@gmail.com</a></p>
-            <p>Phone: +52 55 5213 4379</p>
+        <div class="container">
+            <h1>Eduardo Daniel Puentes Santos</h1>
+            <nav>
+                <a href="#profile">Profile</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a Senior iOS Developer with over 5 years of experience, proficient in creating scalable, user-friendly mobile applications. My expertise lies in Swift, Objective-C, and leveraging Apple’s design patterns to create maintainable code. I am passionate about building high-quality apps and staying up-to-date with the latest technologies in iOS development.</p>
-    </section>
+    <div class="container">
+        <section id="profile" class="section">
+            <h2>Profile</h2>
+            <p>Experienced Senior iOS Developer with over 5 years of expertise in developing high-performance, scalable, and user-friendly iOS applications. Proficient in Swift, Objective-C, and Apple's iOS SDKs. Skilled in Agile methodologies, code reviews, and leading development teams. Committed to writing clean, maintainable code and delivering quality products.</p>
+        </section>
 
-    <section id="experience">
-        <h2>Experience</h2>
-        <div class="job">
-            <h3>iOS Freelance Developer (2023 - Present)</h3>
-            <p>Developed <strong>OutdoorNest</strong>, an app for exploring US national parks using SwiftUI and MVVM architecture.</p>
-            <p><a href="https://github.com/Puente100/OutdoorNest" target="_blank">View OutdoorNest on GitHub</a></p>
-            <img src="swift-logo.png" alt="Swift Logo">
-        </div>
+        <section id="experience" class="section">
+            <h2>Experience</h2>
+            <div class="project-item">
+                <h3>iOS Freelance Developer (2023 - Present)</h3>
+                <p>OutdoorNest is a specialized mobile app tailored for exploring US national parks. It serves as a guide, providing detailed information on trails, points of interest, and activities within each park.</p>
+                <ul>
+                    <li>Developed from scratch with SwiftUI Framework</li>
+                    <li>Consumption of REST services using URL Session</li>
+                    <li>MVVM Architecture</li>
+                    <li>Native Network layer</li>
+                    <li>iOS Development Target 17.0</li>
+                </ul>
+            </div>
 
-        <div class="job">
-            <h3>iOS Developer at Elektra (2021 - 2023)</h3>
-            <p>Worked on <a href="https://apps.apple.com/mx/app/elektra/id1610220567?l=en-GB" target="_blank">Elektra</a>, enhancing e-commerce functionalities using Swift 5 and Objective-C.</p>
-            <img src="apple-logo.png" alt="Apple Logo">
-        </div>
+            <div class="project-item">
+                <h3>iOS Developer at Elektra (2021 - 2023)</h3>
+                <p>Elektra app is designed to shop hundreds of products and find the info you need the most.</p>
+                <p><a href="https://apps.apple.com/mx/app/elektra/id1610220567?l=en-GB" target="_blank">Elektra App</a></p>
+                <ul>
+                    <li>Built with Swift 5, Objective-C modules and CocoaPods</li>
+                    <li>Tracked and resolved bugs with BreakPoints, NSLogs, LLDB</li>
+                    <li>Developed enhancements and new features</li>
+                    <li>Fixed bugs over persistent sign in</li>
+                    <li>Design patterns (singleton, delegate, observer)</li>
+                    <li>Consumption of REST services using URL Session</li>
+                    <li>MVVM Architecture</li>
+                    <li>Core Data and Keychain for storing persistent data and sensitive information</li>
+                    <li>Storyboards for UI design</li>
+                    <li>GitHub for source control</li>
+                    <li>SCRUM practices with Pivotal Tracker, InVision, Zeplin</li>
+                </ul>
+            </div>
 
-        <!-- Placeholder for future projects -->
-        <div class="job">
-            <h3>Project Name (Year - Year)</h3>
-            <p>Description of the project goes here.</p>
-            <p><a href="#" target="_blank">View Project on GitHub</a></p>
-            <img src="project-image.png" alt="Project Image">
-        </div>
-    </section>
+            <div class="project-item">
+                <h3>iOS Developer at Animatiomx (2020 - 2021)</h3>
+                <p>Development and support of the "Scoppio App" for mystery shoppers, using the SwiftUI framework. Implemented features using CoreLocation and MapKit to enhance user experience.</p>
+                <ul>
+                    <li>Applied MVVM architecture</li>
+                </ul>
+            </div>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Swift, Objective-C</li>
-            <li>UIKit, Core Data, AVFoundation, MapKit</li>
-            <li>MVC, MVVM, RxSwift, Dependency Injection</li>
-            <li>Xcode, Git, Cocoapods, CI/CD</li>
-            <li>REST APIs, JSON, Alamofire</li>
-        </ul>
-    </section>
+            <div class="project-item">
+                <h3>Mobile Apps Developer at IdraSoft (2019 - 2020)</h3>
+                <p>Developed systems for access control and collaborated on creating solutions for personnel task management.</p>
+            </div>
+        </section>
 
-    <section id="projects">
-        <h2>Featured Projects</h2>
-        <div class="project">
-            <h3>Project Title 1</h3>
-            <p>A brief description of the project, technologies used, and what you contributed.</p>
-            <p><a href="#" target="_blank">View on GitHub</a></p>
-            <img src="project1-image.png" alt="Project 1 Image">
-        </div>
-        <div class="project">
-            <h3>Project Title 2</h3>
-            <p>A brief description of the project, technologies used, and what you contributed.</p>
-            <p><a href="#" target="_blank">View on GitHub</a></p>
-            <img src="project2-image.png" alt="Project 2 Image">
-        </div>
-        <!-- Add more projects as needed -->
-    </section>
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <ul>
+                <li>Software and Networks Engineering, Universidad Tecnológica de México (UNITEC), 2019 - 2022</li>
+                <li>Swift Full Stack Bootcamp, Apple Coding Academy, February 2023 - December 2023</li>
+                <li>Master in Management and Innovation, National Polytechnic Institute, Mexico, 2010 - 2013</li>
+            </ul>
+        </section>
 
-    <section id="testimonials">
-        <h2>Testimonials</h2>
-        <blockquote>
-            <p>Eduardo is an exceptional iOS developer who consistently delivers high-quality work. His attention to detail and expertise in Swift and Objective-C are impressive.</p>
-            <cite>- Client/Colleague Name</cite>
-        </blockquote>
-        <!-- Add more testimonials as needed -->
-    </section>
+        <section id="skills" class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li><strong>Programming Languages:</strong> Swift, Objective-C</li>
+                <li><strong>Frameworks and Libraries:</strong> UIKit, Core Data, Core Animation, AVFoundation, MapKit, CoreLocation</li>
+                <li><strong>Architectures and Patterns:</strong> MVC, MVVM, Reactive Programming (RxSwift), Dependency Injection</li>
+                <li><strong>Tools and Technologies:</strong> Xcode, Git, Cocoapods, CI/CD, Unit Testing, UI Testing</li>
+                <li><strong>Databases:</strong> Core Data, Realm, SQLite</li>
+                <li><strong>Web Services and Networking:</strong> RESTful APIs, JSON, XML, URLSession, Alamofire</li>
+                <li><strong>Platforms and Environments:</strong> iOS, iPadOS, watchOS, tvOS</li>
+            </ul>
+        </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education">
-            <h3>Bachelor's in Software Engineering</h3>
-            <p>University Technological of Mexico (UNITECH) - Graduated: 2014</p>
-        </div>
-        <div class="education">
-            <h3>Master's in Administration and Innovation</h3>
-            <p>Instituto Politécnico Nacional (IPN) - Graduated: 2018</p>
-        </div>
-        <div class="education">
-            <h3>Swift Fullstack Bootcamp</h3>
-            <p>Apple Coding Academy, Madrid - Completed: 2021</p>
-        </div>
-    </section>
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="project-item">
+                <h3><a href="https://github.com/Puente100/OutdoorNest" target="_blank">OutdoorNest</a></h3>
+                <p>A mobile app for exploring US national parks. Developed with SwiftUI and MVVM architecture.</p>
+            </div>
+            <div class="project-item">
+                <h3><a href="https://github.com/Puente100/ElektraApp" target="_blank">Elektra App</a></h3>
+                <p>A shopping app developed with Swift 5, Objective-C modules, and Core Data.</p>
+            </div>
+            <div class="project-item">
+                <h3><a href="https://github.com/Puente100/ScoppioApp" target="_blank">Scoppio App</a></h3>
+                <p>App for mystery shoppers with features using CoreLocation and MapKit.</p>
+            </div>
+        </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="certification">
-            <h3>Apple Certified iOS Developer</h3>
-            <p>Certification details and year.</p>
-            <img src="certification1-image.png" alt="Certification 1 Image">
-        </div>
-        <div class="certification">
-            <h3>Swift Programming Certificate</h3>
-            <p>Certification details and year.</p>
-            <img src="certification2-image.png" alt="Certification 2 Image">
-        </div>
-        <!-- Add more certifications as needed -->
-    </section>
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:puente68@gmail.com">puente68@gmail.com</a></p>
+            <p>Phone: +52 55 5213 4379</p>
+            <a href="mailto:puente68@gmail.com" class="button">Send Email</a>
+        </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Eduardo Puente</p>
+        <p>&copy; 2024 Eduardo Daniel Puentes Santos. All rights reserved.</p>
     </footer>
 </body>
 </html>
-

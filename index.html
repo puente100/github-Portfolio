@@ -51,11 +51,6 @@
         .job a:hover {
             text-decoration: underline;
         }
-        footer {
-            background: #f4f4f4;
-            padding: 10px;
-            text-align: center;
-        }
         .skills ul {
             list-style: none;
             padding: 0;
@@ -65,6 +60,27 @@
             margin: 5px 0;
             padding: 10px;
             border-radius: 5px;
+        }
+        .projects img, .certifications img {
+            width: 100px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .testimonials blockquote {
+            border-left: 3px solid #007bff;
+            padding-left: 20px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        .testimonials cite {
+            display: block;
+            text-align: right;
+            font-weight: bold;
+        }
+        footer {
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
         }
     </style>
 </head>
@@ -81,7 +97,7 @@
 
     <section id="about">
         <h2>About Me</h2>
-        <p>I am a Senior iOS Developer with over 5 years of experience, proficient in creating scalable, user-friendly mobile applications. My expertise lies in Swift, Objective-C, and leveraging Apple’s design patterns to create maintainable code.</p>
+        <p>I am a Senior iOS Developer with over 5 years of experience, proficient in creating scalable, user-friendly mobile applications. My expertise lies in Swift, Objective-C, and leveraging Apple’s design patterns to create maintainable code. I am passionate about building high-quality apps and staying up-to-date with the latest technologies in iOS development.</p>
     </section>
 
     <section id="experience">
@@ -119,8 +135,66 @@
         </ul>
     </section>
 
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project">
+            <h3>Project Title 1</h3>
+            <p>A brief description of the project, technologies used, and what you contributed.</p>
+            <p><a href="#" target="_blank">View on GitHub</a></p>
+            <img src="project1-image.png" alt="Project 1 Image">
+        </div>
+        <div class="project">
+            <h3>Project Title 2</h3>
+            <p>A brief description of the project, technologies used, and what you contributed.</p>
+            <p><a href="#" target="_blank">View on GitHub</a></p>
+            <img src="project2-image.png" alt="Project 2 Image">
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>Eduardo is an exceptional iOS developer who consistently delivers high-quality work. His attention to detail and expertise in Swift and Objective-C are impressive.</p>
+            <cite>- Client/Colleague Name</cite>
+        </blockquote>
+        <!-- Add more testimonials as needed -->
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education">
+            <h3>Bachelor's in Software Engineering</h3>
+            <p>University Technological of Mexico (UNITECH) - Graduated: 2014</p>
+        </div>
+        <div class="education">
+            <h3>Master's in Administration and Innovation</h3>
+            <p>Instituto Politécnico Nacional (IPN) - Graduated: 2018</p>
+        </div>
+        <div class="education">
+            <h3>Swift Fullstack Bootcamp</h3>
+            <p>Apple Coding Academy, Madrid - Completed: 2021</p>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="certification">
+            <h3>Apple Certified iOS Developer</h3>
+            <p>Certification details and year.</p>
+            <img src="certification1-image.png" alt="Certification 1 Image">
+        </div>
+        <div class="certification">
+            <h3>Swift Programming Certificate</h3>
+            <p>Certification details and year.</p>
+            <img src="certification2-image.png" alt="Certification 2 Image">
+        </div>
+        <!-- Add more certifications as needed -->
+    </section>
+
     <footer>
         <p>&copy; 2024 Eduardo Puente</p>
     </footer>
 </body>
 </html>
+

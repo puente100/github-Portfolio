@@ -3,59 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Puentes | iOS Developer Portfolio</title>
+    <title>Eduardo Puente | iOS Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+        }
+        .profile-img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+        .header-content h1 {
+            margin: 0;
+        }
+        .header-content p {
+            margin: 5px 0;
+        }
+        section {
+            padding: 20px;
+            margin: 0 10%;
+        }
+        .job {
+            margin-bottom: 20px;
+        }
+        .job img {
+            width: 100px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        .job h3 {
+            margin: 0;
+        }
+        .job a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .job a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #f4f4f4;
+            padding: 10px;
+            text-align: center;
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li {
+            background: #e4e4e4;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="cv.pdf" download>Resume</a></li>
-            </ul>
-        </nav>
-        <h1>Eduardo Puentes</h1>
-        <p>Senior iOS Developer</p>
-    </header>
-
-    <section id="home">
-        <div class="hero">
-            <h2>Hello, I'm Eduardo</h2>
-            <p>A passionate iOS developer creating innovative mobile apps.</p>
-            <a href="#projects" class="btn">View My Work</a>
+        <div class="header-content">
+            <img src="profile.jpg" alt="Eduardo Puente" class="profile-img">
+            <h1>Eduardo Puente</h1>
+            <p>Senior iOS Developer | Swift | Objective-C</p>
+            <p>Email: <a href="mailto:puente68@gmail.com">puente68@gmail.com</a></p>
+            <p>Phone: +52 55 5213 4379</p>
         </div>
-    </section>
+    </header>
 
     <section id="about">
         <h2>About Me</h2>
-        <div class="about-container">
-            <img src="profile.jpg" alt="Eduardo Puentes">
-            <p>...</p> </div>
+        <p>I am a Senior iOS Developer with over 5 years of experience, proficient in creating scalable, user-friendly mobile applications. My expertise lies in Swift, Objective-C, and leveraging Apple’s design patterns to create maintainable code.</p>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-container">
-            <div class="project">
-                <h3>OutdoorNest</h3>
-                <p>...</p>
-                <a href="https://github.com/Puente100/OutdoorNest" target="_blank">GitHub</a>
-            </div>
-            </div>
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="job">
+            <h3>iOS Freelance Developer (2023 - Present)</h3>
+            <p>Developed <strong>OutdoorNest</strong>, an app for exploring US national parks using SwiftUI and MVVM architecture.</p>
+            <p><a href="https://github.com/Puente100/OutdoorNest" target="_blank">View OutdoorNest on GitHub</a></p>
+            <img src="swift-logo.png" alt="Swift Logo">
+        </div>
+
+        <div class="job">
+            <h3>iOS Developer at Elektra (2021 - 2023)</h3>
+            <p>Worked on <a href="https://apps.apple.com/mx/app/elektra/id1610220567?l=en-GB" target="_blank">Elektra</a>, enhancing e-commerce functionalities using Swift 5 and Objective-C.</p>
+            <img src="apple-logo.png" alt="Apple Logo">
+        </div>
+
+        <!-- Placeholder for future projects -->
+        <div class="job">
+            <h3>Project Name (Year - Year)</h3>
+            <p>Description of the project goes here.</p>
+            <p><a href="#" target="_blank">View Project on GitHub</a></p>
+            <img src="project-image.png" alt="Project Image">
+        </div>
     </section>
 
     <section id="skills">
         <h2>Skills</h2>
         <ul>
-            <li>Swift</li>
-            </ul>
+            <li>Swift, Objective-C</li>
+            <li>UIKit, Core Data, AVFoundation, MapKit</li>
+            <li>MVC, MVVM, RxSwift, Dependency Injection</li>
+            <li>Xcode, Git, Cocoapods, CI/CD</li>
+            <li>REST APIs, JSON, Alamofire</li>
+        </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 Eduardo Puentes | <a href="mailto:puente68@gmail.com">puente68@gmail.com</a></p>
+        <p>&copy; 2024 Eduardo Puente</p>
     </footer>
 </body>
 </html>

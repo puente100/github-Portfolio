@@ -3,152 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Daniel Puentes Santos - iOS Developer</title>
+    <title>Eduardo Daniel Puente Santos - iOS Developer</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background: url('background-pattern.png') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-        }
-        .container {
-            width: 85%;
-            margin: auto;
-            overflow: hidden;
+            background-color: #121212;
+            color: #f0f0f0;
+            scroll-behavior: smooth;
         }
         header {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 20px 0;
-            min-height: 100px;
-            border-bottom: 2px solid #ddd;
+            background: #000;
+            color: #ffa500;
+            padding: 20px;
             text-align: center;
             position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
         }
         header h1 {
             margin: 0;
-            font-size: 3rem;
-            color: #007aff;
+            font-size: 2.8rem;
+            animation: fadeIn 1s ease-out;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
+        header nav {
+            margin-top: 15px;
         }
-        nav a {
+        header nav a {
             text-decoration: none;
-            color: #007aff;
-            margin: 0 15px;
-            font-size: 1.1rem;
+            color: #ffa500;
+            margin: 0 20px;
+            font-size: 1.2rem;
+            transition: color 0.3s, transform 0.3s;
         }
-        nav a:hover {
-            text-decoration: underline;
+        header nav a:hover {
+            color: #ff5722;
+            transform: translateY(-3px);
         }
         .profile-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 30px;
         }
         .profile-container img {
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            margin-right: 20px;
-            border: 3px solid #007aff;
+            width: 130px;
+            height: 130px;
+            border: 4px solid #ffa500;
+            transition: transform 0.3s ease-in-out;
         }
-        .profile-container h2 {
-            margin: 0;
-            font-size: 2rem;
-            color: #007aff;
+        .profile-container img:hover {
+            transform: scale(1.1);
         }
         .section {
-            padding: 20px;
-            background: #fff;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            background: #1e1e1e;
+            margin: 30px auto;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 1s ease-out;
+            max-width: 900px;
         }
         .section h2 {
-            border-bottom: 2px solid #007aff;
-            padding-bottom: 10px;
-            font-size: 1.8rem;
-            color: #007aff;
+            border-bottom: 4px solid #ffa500;
+            padding-bottom: 15px;
+            font-size: 2.5rem;
+            color: #ffa500;
+            margin-bottom: 20px;
+            transition: color 0.3s ease-in-out;
         }
-        .section p {
+        .section h2:hover {
+            color: #ff5722;
+        }
+        .section p, .section ul {
             margin: 10px 0;
+            line-height: 1.8;
+        }
+        .button {
+            display: inline-block;
+            background: #ffa500;
+            color: #000;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background: #ff5722;
+            transform: scale(1.05);
+        }
+        .project-item {
+            margin-bottom: 25px;
+            animation: slideIn 0.5s ease-out;
+        }
+        .project-item a {
+            text-decoration: none;
+            color: #ffa500;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .project-item a:hover {
+            color: #ff5722;
         }
         footer {
-            background: rgba(255, 255, 255, 0.9);
+            background-color: #000;
+            color: #ffa500;
             padding: 20px;
             text-align: center;
-            border-top: 2px solid #ddd;
-            margin-top: 20px;
+            border-top: 4px solid #ffa500;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 30px;
         }
         footer p {
             margin: 0;
         }
-        .button {
-            display: inline-block;
-            background: #007aff;
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
-        .button:hover {
-            background: #005bb5;
-        }
-        .project-item {
-            margin-bottom: 15px;
-        }
-        .project-item a {
-            text-decoration: none;
-            color: #007aff;
-            font-weight: bold;
-        }
-        .project-item a:hover {
-            text-decoration: underline;
-        }
-        .swift-logos {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            opacity: 0.1;
-        }
-        .swift-logos img {
-            width: 50px;
-            height: auto;
-            margin-left: 10px;
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="profile-container">
-                <img src="profile-photo.jpg" alt="Eduardo Daniel Puentes Santos">
-                <div>
-                    <h1>Eduardo Daniel Puentes Santos</h1>
-                    <p>Senior iOS Developer</p>
-                </div>
+        <div class="profile-container">
+            <img src="profile.jpg" alt="Eduardo Daniel Puente Santos">
+            <div>
+                <h1>Eduardo Daniel Puente Santos</h1>
+                <p>Senior iOS Developer</p>
             </div>
-            <nav>
-                <a href="#profile">Profile</a>
-                <a href="#experience">Experience</a>
-                <a href="#education">Education</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
         </div>
-        <div class="swift-logos">
-            <img src="swift-logo.png" alt="Swift Logo">
-        </div>
+        <nav>
+            <a href="#profile">Profile</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
 
     <div class="container">
@@ -220,38 +232,26 @@
                 <li><strong>Frameworks and Libraries:</strong> UIKit, Core Data, Core Animation, AVFoundation, MapKit, CoreLocation</li>
                 <li><strong>Architectures and Patterns:</strong> MVC, MVVM, Reactive Programming (RxSwift), Dependency Injection</li>
                 <li><strong>Tools and Technologies:</strong> Xcode, Git, Cocoapods, CI/CD, Unit Testing, UI Testing</li>
-                <li><strong>Databases:</strong> Core Data, Realm, SQLite</li>
-                <li><strong>Web Services and Networking:</strong> RESTful APIs, JSON, XML, URLSession, Alamofire</li>
-                <li><strong>Platforms and Environments:</strong> iOS, iPadOS, watchOS, tvOS</li>
             </ul>
         </section>
 
         <section id="projects" class="section">
             <h2>Projects</h2>
             <div class="project-item">
-                <h3><a href="https://github.com/Puente100/OutdoorNest" target="_blank">OutdoorNest</a></h3>
-                <p>A mobile app for exploring US national parks. Developed with SwiftUI and MVVM architecture.</p>
-            </div>
-            <div class="project-item">
-                <h3><a href="https://github.com/Puente100/ElektraApp" target="_blank">Elektra App</a></h3>
-                <p>A shopping app developed with Swift 5, Objective-C modules, and Core Data.</p>
-            </div>
-            <div class="project-item">
-                <h3><a href="https://github.com/Puente100/ScoppioApp" target="_blank">Scoppio App</a></h3>
-                <p>App for mystery shoppers with features using CoreLocation and MapKit.</p>
+                <h3>OutdoorNest</h3>
+                <p>OutdoorNest is a specialized mobile app tailored for exploring US national parks. It serves as a guide, providing detailed information on trails, points of interest, and activities within each park.</p>
+                <a class="button" href="#contact">Contact Me</a>
             </div>
         </section>
 
         <section id="contact" class="section">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:puente68@gmail.com">puente68@gmail.com</a></p>
-            <p>Phone: +52 55 5213 4379</p>
-            <a href="mailto:puente68@gmail.com" class="button">Send Email</a>
+            <p>You can reach me via email at <a href="mailto:puente68@gmail.com" style="color: #ffa500;">puente68@gmail.com</a> or connect with me on <a href="https://linkedin.com/in/danielpuentesantos" target="_blank" style="color: #ffa500;">LinkedIn</a>.</p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 Eduardo Daniel Puentes Santos. All rights reserved.</p>
+        <p>&copy; 2024 Eduardo Daniel Puente Santos. All rights reserved.</p>
     </footer>
 </body>
 </html>

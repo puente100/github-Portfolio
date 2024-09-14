@@ -3,31 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Daniel Puente Santos - iOS Developer</title>
+    <title>Eduardo Daniel Puentes Santos - iOS Developer</title>
     <style>
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: url('background-pattern.png') no-repeat center center fixed;
+            background-size: cover;
             color: #333;
         }
         .container {
-            width: 80%;
+            width: 85%;
             margin: auto;
             overflow: hidden;
         }
         header {
-            background: #fff;
-            padding-top: 30px;
-            min-height: 70px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 0;
+            min-height: 100px;
             border-bottom: 2px solid #ddd;
             text-align: center;
+            position: relative;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
+            color: #007aff;
         }
         nav {
             display: flex;
@@ -40,6 +43,27 @@
             margin: 0 15px;
             font-size: 1.1rem;
         }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .profile-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .profile-container img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+            border: 3px solid #007aff;
+        }
+        .profile-container h2 {
+            margin: 0;
+            font-size: 2rem;
+            color: #007aff;
+        }
         .section {
             padding: 20px;
             background: #fff;
@@ -50,15 +74,18 @@
         .section h2 {
             border-bottom: 2px solid #007aff;
             padding-bottom: 10px;
+            font-size: 1.8rem;
+            color: #007aff;
         }
         .section p {
             margin: 10px 0;
         }
         footer {
-            background: #fff;
-            padding: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
             text-align: center;
             border-top: 2px solid #ddd;
+            margin-top: 20px;
         }
         footer p {
             margin: 0;
@@ -71,6 +98,7 @@
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
+            transition: background 0.3s;
         }
         .button:hover {
             background: #005bb5;
@@ -81,16 +109,34 @@
         .project-item a {
             text-decoration: none;
             color: #007aff;
+            font-weight: bold;
         }
         .project-item a:hover {
             text-decoration: underline;
+        }
+        .swift-logos {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            opacity: 0.1;
+        }
+        .swift-logos img {
+            width: 50px;
+            height: auto;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Eduardo Daniel Puentes Santos</h1>
+            <div class="profile-container">
+                <img src="profile-photo.jpg" alt="Eduardo Daniel Puentes Santos">
+                <div>
+                    <h1>Eduardo Daniel Puentes Santos</h1>
+                    <p>Senior iOS Developer</p>
+                </div>
+            </div>
             <nav>
                 <a href="#profile">Profile</a>
                 <a href="#experience">Experience</a>
@@ -100,13 +146,14 @@
                 <a href="#contact">Contact</a>
             </nav>
         </div>
+        <div class="swift-logos">
+            <img src="swift-logo.png" alt="Swift Logo">
+        </div>
     </header>
 
     <div class="container">
         <section id="profile" class="section">
             <h2>Profile</h2>
-                <img src="profile.jpg" alt="Eduardo Daniel Puente Santos" class="profile-photo">
-
             <p>Experienced Senior iOS Developer with over 5 years of expertise in developing high-performance, scalable, and user-friendly iOS applications. Proficient in Swift, Objective-C, and Apple's iOS SDKs. Skilled in Agile methodologies, code reviews, and leading development teams. Committed to writing clean, maintainable code and delivering quality products.</p>
         </section>
 
@@ -204,7 +251,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Eduardo Daniel Puente Santos. All rights reserved.</p>
+        <p>&copy; 2024 Eduardo Daniel Puentes Santos. All rights reserved.</p>
     </footer>
 </body>
 </html>

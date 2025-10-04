@@ -1,273 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eduardo Daniel Puente Santos - iOS Developer</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #f0f0f0;
-            scroll-behavior: smooth;
-        }
-        header {
-            background: #000;
-            color: #ffa500;
-            padding: 20px;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            animation: fadeIn 1s ease-out;
-        }
-        header nav {
-            margin-top: 15px;
-        }
-        header nav a {
-            text-decoration: none;
-            color: #ffa500;
-            margin: 0 20px;
-            font-size: 1.2rem;
-            transition: color 0.3s, transform 0.3s;
-        }
-        header nav a:hover {
-            color: #ff5722;
-            transform: translateY(-3px);
-        }
-        .profile-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        .profile-container img {
-            border-radius: 50%;
-            width: 130px;
-            height: 130px;
-            border: 4px solid #ffa500;
-            transition: transform 0.3s ease-in-out;
-        }
-        .profile-container img:hover {
-            transform: scale(1.1);
-        }
-        .section {
-            padding: 40px;
-            background: #1e1e1e;
-            margin: 30px auto;
-            border-radius: 12px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
-            animation: fadeIn 1s ease-out;
-            max-width: 900px;
-        }
-        .section h2 {
-            border-bottom: 4px solid #ffa500;
-            padding-bottom: 15px;
-            font-size: 2.5rem;
-            color: #ffa500;
-            margin-bottom: 20px;
-            transition: color 0.3s ease-in-out;
-        }
-        .section h2:hover {
-            color: #ff5722;
-        }
-        .section p, .section ul {
-            margin: 10px 0;
-            line-height: 1.8;
-        }
-        .button {
-            display: inline-block;
-            background: #ffa500;
-            color: #000;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.3s;
-        }
-        .button:hover {
-            background: #ff5722;
-            transform: scale(1.05);
-        }
-        .project-item {
-            margin-bottom: 25px;
-            animation: slideIn 0.5s ease-out;
-        }
-        .project-item a {
-            text-decoration: none;
-            color: #ffa500;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        .project-item a:hover {
-            color: #ff5722;
-        }
-        footer {
-            background-color: #000;
-            color: #ffa500;
-            padding: 20px;
-            text-align: center;
-            border-top: 4px solid #ffa500;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
-            position: relative;
-            bottom: 0;
-            width: 100%;
-            margin-top: 30px;
-        }
-        footer p {
-            margin: 0;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eduardo Daniel Puente Santos — iOS Developer</title>
+  <meta name="description" content="Portfolio of Eduardo Daniel Puente Santos — Senior iOS Developer. Expert in Swift, SwiftUI, Combine, MVVM, Core Data, and CloudKit. Published apps: Tiny Victories, Kualipet." />
+  <meta property="og:title" content="Eduardo Daniel Puente Santos — iOS Developer" />
+  <meta property="og:description" content="Showcase of iOS apps, projects, and experience in native Swift development." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b0b0c" />
+  <style>
+    :root {
+      --bg: #0b0b0c; --panel: #151516; --panel-2: #101011; --text: #f5f7fa; --muted: #c8ccd4;
+      --brand: #ff9500; --brand-2: #ff5e2b; --radius: 16px; --shadow: 0 10px 30px rgba(0,0,0,.45);
+      --maxw: 1060px;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; color:var(--text); background:linear-gradient(180deg,#0b0b0c 0%,#121212 100%)}
+
+    header{position:sticky;top:0;background:rgba(9,9,10,.8);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.1);z-index:50;}
+    .nav{max-width:var(--maxw);margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:14px}
+    .avatar{width:56px;height:56px;border-radius:50%;border:2px solid var(--brand);object-fit:cover;box-shadow:0 0 10px rgba(255,149,0,.4)}
+    .brand h1{font-size:20px;color:var(--text)}
+    .links{display:flex;gap:10px;flex-wrap:wrap}
+    .links a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:12px;transition:.2s}
+    .links a:hover,.links a.active{background:var(--brand);color:#000}
+
+    .hero{max-width:var(--maxw);margin:40px auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:0 18px}
+    .hero-text h2{font-size:clamp(2rem,1rem+2vw,3rem);color:var(--brand);margin-bottom:12px}
+    .hero-text p{color:var(--muted);margin-bottom:16px;line-height:1.6}
+    .btn{background:var(--brand);color:#000;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;transition:.2s}
+    .btn:hover{background:var(--brand-2);}
+    .hero-img img{width:100%;border-radius:20px;box-shadow:var(--shadow)}
+
+    main{max-width:var(--maxw);margin:auto;padding:20px 18px 40px}
+    section{background:var(--panel);border-radius:var(--radius);padding:24px;margin:28px 0;box-shadow:var(--shadow)}
+    h3{color:var(--brand);margin-bottom:12px;font-size:1.5rem}
+
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+    .card{background:var(--panel-2);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,.08);transition:.3s}
+    .card:hover{transform:translateY(-4px);border-color:var(--brand)}
+    .card h4{margin-bottom:6px}
+    .card p{color:var(--muted);line-height:1.5;margin-bottom:10px}
+
+    footer{text-align:center;padding:28px 18px;color:var(--muted)}
+  </style>
 </head>
 <body>
-    <header>
-        <div class="profile-container">
-            <img src="profile.jpg" alt="Eduardo Daniel Puente Santos">
-            <div>
-                <h1>Eduardo Daniel Puente Santos</h1>
-                <p>Senior iOS Developer</p>
-            </div>
-             <img src="swift.png" alt="Swift" class="swift-logo">
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img src="profile.jpg" alt="Eduardo Daniel Puente Santos" class="avatar">
+        <h1>Eduardo Daniel Puente Santos</h1>
+      </div>
+      <nav class="links">
+        <a href="#about" class="active">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Senior iOS Developer — Swift & SwiftUI Specialist</h2>
+      <p>I design, build, and publish high‑quality iOS applications with clean architecture and attention to user experience. Skilled in MVVM, Combine, Core Data, and CloudKit. Passionate about scalable, testable, and elegant code.</p>
+      <a class="btn" href="#projects">Explore My Projects</a>
+    </div>
+    <div class="hero-img">
+      <img src="profile.jpg" alt="Eduardo Daniel Puente Santos portrait">
+    </div>
+  </section>
+
+  <main>
+    <section id="about">
+      <h3>About Me</h3>
+      <p>With over five years of experience in native iOS development, I specialize in building scalable, performance‑driven apps using Swift and SwiftUI. My focus is on crafting maintainable architecture with MVVM and integrating Apple frameworks like Core Data, MapKit, and HealthKit. My published apps demonstrate product quality, user engagement, and design consistency aligned with Apple’s Human Interface Guidelines.</p>
+    </section>
+
+    <section id="skills">
+      <h3>Core Skills</h3>
+      <ul>
+        <li>Swift · SwiftUI · UIKit · Combine</li>
+        <li>MVVM Architecture · Core Data · CloudKit</li>
+        <li>RESTful APIs · URLSession · Dependency Injection</li>
+        <li>Testing (XCTest, XCUITest) · GitHub Actions · TestFlight</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h3>Highlighted Projects</h3>
+      <div class="projects">
+        <div class="card">
+          <h4>Tiny Victories — App Store</h4>
+          <p>Micro‑goal tracker built with SwiftUI and Core Data to encourage daily progress. <a href="https://apps.apple.com/us/app/tinyvictories/id6747396053" target="_blank" class="btn">View App</a></p>
         </div>
-        <nav>
-            <a href="#profile">Profile</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+        <div class="card">
+          <h4>Kualipet — App Store</h4>
+          <p>Pet care assistant featuring reminders and data persistence. <a href="https://apps.apple.com/us/app/kualipet/id6748324930" target="_blank" class="btn">View App</a></p>
+        </div>
+        <div class="card">
+          <h4>AdoptMe</h4>
+          <p>SwiftUI app using Petfinder API for adopting pets nearby, showcasing API integration and UI filtering.</p>
+        </div>
+        <div class="card">
+          <h4>PetPlanner</h4>
+          <p>Daily planner for pet routines using Core Data and notifications for reminders.</p>
+        </div>
+        <div class="card">
+          <h4>OutdoorNest</h4>
+          <p>National Parks guide with offline trail data built with MVVM and URLSession networking.</p>
+        </div>
+        <div class="card">
+          <h4>DoggoGuide</h4>
+          <p>Dynamic SwiftUI lists using the Dog API to display breeds and photos with responsive UI.</p>
+        </div>
+      </div>
+    </section>
 
-    <div class="container">
-        <section id="profile" class="section">
-            <h2>Profile</h2>
-            <p>Experienced Senior iOS Developer with over 5 years of expertise in developing high-performance, scalable, and user-friendly iOS applications. Proficient in Swift, Objective-C, and Apple's iOS SDKs. Skilled in Agile methodologies, code reviews, and leading development teams. Committed to writing clean, maintainable code and delivering quality products.</p>
-        </section>
+    <section id="contact">
+      <h3>Contact</h3>
+      <p>📧 <a href="mailto:puente68@gmail.com" class="btn">puente68@gmail.com</a></p>
+      <p>🔗 <a href="https://linkedin.com/in/danielpuentesantos" target="_blank" class="btn">LinkedIn</a></p>
+      <p>🧩 <a href="https://github.com/puente100" target="_blank" class="btn">GitHub</a></p>
+    </section>
+  </main>
 
-        <section id="experience" class="section">
-            <h2>Experience</h2>
-            <div class="project-item">
-                <h3>iOS Freelance Developer (2023 - Present)</h3>
-                <p>OutdoorNest is a specialized mobile app tailored for exploring US national parks. It serves as a guide, providing detailed information on trails, points of interest, and activities within each park.</p>
-                <ul>
-                    <li>Developed from scratch with SwiftUI Framework</li>
-                    <li>Consumption of REST services using URL Session</li>
-                    <li>MVVM Architecture</li>
-                    <li>Native Network layer</li>
-                    <li>iOS Development Target 17.0</li>
-                </ul>
-            </div>
-
-            <div class="project-item">
-                <h3>iOS Developer at Elektra (2021 - 2023)</h3>
-                <p>Elektra app is designed to shop hundreds of products and find the info you need the most.</p>
-                <p><a href="https://apps.apple.com/mx/app/elektra/id1610220567?l=en-GB" target="_blank">Elektra App</a></p>
-                <ul>
-                    <li>Built with Swift 5, Objective-C modules and CocoaPods</li>
-                    <li>Tracked and resolved bugs with BreakPoints, NSLogs, LLDB</li>
-                    <li>Developed enhancements and new features</li>
-                    <li>Fixed bugs over persistent sign in</li>
-                    <li>Design patterns (singleton, delegate, observer)</li>
-                    <li>Consumption of REST services using URL Session</li>
-                    <li>MVVM Architecture</li>
-                    <li>Core Data and Keychain for storing persistent data and sensitive information</li>
-                    <li>Storyboards for UI design</li>
-                    <li>GitHub for source control</li>
-                    <li>SCRUM practices with Pivotal Tracker, InVision, Zeplin</li>
-                </ul>
-            </div>
-
-            <div class="project-item">
-                <h3>iOS Developer at Animatiomx (2020 - 2021)</h3>
-                <p>Development and support of the "Scoppio App" for mystery shoppers, using the SwiftUI framework. Implemented features using CoreLocation and MapKit to enhance user experience.</p>
-                <ul>
-                    <li>Applied MVVM architecture</li>
-                </ul>
-            </div>
-
-            <div class="project-item">
-                <h3>Mobile Apps Developer at IdraSoft (2019 - 2020)</h3>
-                <p>Developed systems for access control and collaborated on creating solutions for personnel task management.</p>
-            </div>
-        </section>
-
-        <section id="education" class="section">
-            <h2>Education</h2>
-            <ul>
-                <li>Software and Networks Engineering, Universidad Tecnológica de México (UNITEC), 2019 - 2022</li>
-                <li>Swift Full Stack Bootcamp, Apple Coding Academy, February 2023 - December 2023</li>
-                <li>Master in Management and Innovation, National Polytechnic Institute, Mexico, 2010 - 2013</li>
-            </ul>
-        </section>
-
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Programming Languages:</strong> Swift, Objective-C</li>
-                <li><strong>Frameworks and Libraries:</strong> UIKit, Core Data, Core Animation, AVFoundation, MapKit, CoreLocation</li>
-                <li><strong>Architectures and Patterns:</strong> MVC, MVVM, Reactive Programming (RxSwift), Dependency Injection</li>
-                <li><strong>Tools and Technologies:</strong> Xcode, Git, Cocoapods, CI/CD, Unit Testing, UI Testing</li>
-            </ul>
-        </section>
-
- <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="project-item">
-        <h3>OutdoorNest</h3>
-        <p>OutdoorNest is a specialized mobile app tailored for exploring US national parks. It serves as a guide, providing detailed information on trails, points of interest, and activities within each park.</p>
-        <!-- Botón que redirige al repositorio de GitHub -->
-        <a class="button" href="https://github.com/Puente100/OutdoorNest" target="_blank">View on GitHub</a>
-    </div>
-
-    <div class="project-item">
-        <h3>DoggoGuide</h3>
-        <p>DoggoGuide is an iOS app built with SwiftUI that allows users to explore different dog breeds. The app uses the Dog API to fetch a list of dog breeds and displays random images for each selected breed.</p>
-        <!-- Botón que redirige al repositorio de GitHub del nuevo proyecto -->
-        <a class="button" href="https://github.com/Puente100/DoggoGuide" target="_blank">View on GitHub</a>
-    </div>
-    <div class="project-item">
-        <h3>WeatherWise</h3>
-        <p>WeatherWise is a weather application that provides real-time weather data based on the user's current location. Designed with simplicity and ease of use in mind, the app delivers essential weather information such as temperature, humidity, and wind speed right at your fingertips.</p>
-        <!-- Botón que redirige al repositorio de GitHub del nuevo proyecto -->
-        <a class="button" href="https://github.com/Puente100/WeatherWise" target="_blank">View on GitHub</a>
-    </div>
-</section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>You can reach me via email at <a href="mailto:puente68@gmail.com" style="color: #ffa500;">puente68@gmail.com</a> or connect with me on <a href="https://linkedin.com/in/danielpuentesantos" target="_blank" style="color: #ffa500;">LinkedIn</a>.</p>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2024 Eduardo Daniel Puente Santos. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>© 2025 Eduardo Daniel Puente Santos — iOS Developer</p>
+  </footer>
 </body>
 </html>
+

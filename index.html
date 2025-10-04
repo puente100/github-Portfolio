@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eduardo Daniel Puente Santos — iOS Developer</title>
   <meta name="description" content="Portfolio of Eduardo Daniel Puente Santos — Senior iOS Developer. Expert in Swift, SwiftUI, Combine, MVVM, Core Data, and CloudKit. Published apps: Tiny Victories, Kualipet." />
-  <meta property="og:title" content="Eduardo Daniel Puente Santos — iOS Developer" />
-  <meta property="og:description" content="Showcase of iOS apps, projects, and experience in native Swift development." />
-  <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b0b0c" />
   <style>
     :root {
       --bg: #0b0b0c; --panel: #151516; --panel-2: #101011; --text: #f5f7fa; --muted: #c8ccd4;
@@ -20,18 +16,18 @@
     body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial; color:var(--text); background:linear-gradient(180deg,#0b0b0c 0%,#121212 100%)}
 
     header{position:sticky;top:0;background:rgba(9,9,10,.8);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.1);z-index:50;}
-    .nav{max-width:var(--maxw);margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;gap:14px}
+    .nav{max-width:var(--maxw);margin:auto;padding:10px 18px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:14px;margin-bottom:8px}
     .avatar{width:56px;height:56px;border-radius:50%;border:2px solid var(--brand);object-fit:cover;box-shadow:0 0 10px rgba(255,149,0,.4)}
     .brand h1{font-size:20px;color:var(--text)}
-    .links{display:flex;gap:10px;flex-wrap:wrap}
+    .links{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;width:100%}
     .links a{color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;border-radius:12px;transition:.2s}
     .links a:hover,.links a.active{background:var(--brand);color:#000}
 
     .hero{max-width:var(--maxw);margin:40px auto;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;padding:0 18px}
     .hero-text h2{font-size:clamp(2rem,1rem+2vw,3rem);color:var(--brand);margin-bottom:12px}
     .hero-text p{color:var(--muted);margin-bottom:16px;line-height:1.6}
-    .btn{background:var(--brand);color:#000;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;transition:.2s}
+    .btn{display:inline-block;margin-top:8px;background:var(--brand);color:#000;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:700;transition:.2s;white-space:nowrap}
     .btn:hover{background:var(--brand-2);}
     .hero-img img{width:100%;border-radius:20px;box-shadow:var(--shadow)}
 
@@ -39,11 +35,21 @@
     section{background:var(--panel);border-radius:var(--radius);padding:24px;margin:28px 0;box-shadow:var(--shadow)}
     h3{color:var(--brand);margin-bottom:12px;font-size:1.5rem}
 
-    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
-    .card{background:var(--panel-2);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,.08);transition:.3s}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+    .card{background:var(--panel-2);padding:18px;border-radius:14px;border:1px solid rgba(255,255,255,.08);transition:.3s;display:flex;flex-direction:column;justify-content:space-between}
     .card:hover{transform:translateY(-4px);border-color:var(--brand)}
     .card h4{margin-bottom:6px}
-    .card p{color:var(--muted);line-height:1.5;margin-bottom:10px}
+    .card p{color:var(--muted);line-height:1.5;margin-bottom:12px}
+    .card .btn{margin-top:auto;align-self:flex-start}
+
+    #contact p{margin-bottom:12px}
+    #contact a.btn{display:inline-block;margin-top:6px}
+
+    @media(max-width:768px){
+      .hero{grid-template-columns:1fr;gap:20px;text-align:center}
+      .links{justify-content:center}
+      .hero-img img{max-width:70%;margin:auto}
+    }
 
     footer{text-align:center;padding:28px 18px;color:var(--muted)}
   </style>
@@ -95,12 +101,18 @@
       <h3>Highlighted Projects</h3>
       <div class="projects">
         <div class="card">
-          <h4>Tiny Victories — App Store</h4>
-          <p>Micro‑goal tracker built with SwiftUI and Core Data to encourage daily progress. <a href="https://apps.apple.com/us/app/tinyvictories/id6747396053" target="_blank" class="btn">View App</a></p>
+          <div>
+            <h4>Tiny Victories — App Store</h4>
+            <p>Micro‑goal tracker built with SwiftUI and Core Data to encourage daily progress.</p>
+          </div>
+          <a href="https://apps.apple.com/us/app/tinyvictories/id6747396053" target="_blank" class="btn">View App</a>
         </div>
         <div class="card">
-          <h4>Kualipet — App Store</h4>
-          <p>Pet care assistant featuring reminders and data persistence. <a href="https://apps.apple.com/us/app/kualipet/id6748324930" target="_blank" class="btn">View App</a></p>
+          <div>
+            <h4>Kualipet — App Store</h4>
+            <p>Pet care assistant featuring reminders and data persistence.</p>
+          </div>
+          <a href="https://apps.apple.com/us/app/kualipet/id6748324930" target="_blank" class="btn">View App</a>
         </div>
         <div class="card">
           <h4>AdoptMe</h4>
@@ -134,4 +146,3 @@
   </footer>
 </body>
 </html>
-
